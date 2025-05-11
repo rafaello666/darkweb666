@@ -1,80 +1,175 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Krótki opis (SEO) – brak danych autora -->
-<meta name="description" content="darkweb666 – anonimowa, odporna na cenzurę platforma publikacji treści (Tor + Clearnet).">
-<title>Kinga Szczepanek – dane personalne lekarza - narkomanki</title>
+  <meta charset="UTF-8">
+  <title>KINGA SZCZEPANEK - ONION LAYOUT</title>
+  <style>
+    /* Tło i fonty */
+    body {
+      background: radial-gradient(circle at center, #222, #000);
+      color: #0f0;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      overflow: hidden;
+    }
 
-<!-- Ciemny motyw + akcent neon-zielony -->
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-:root{
-  --bg:#121212; --fg:#e0e0e0; --accent:#00ff9c; --accent2:#bb86fc;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Roboto',sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;display:flex;flex-direction:column;align-items:center}
-header,footer{width:100%;text-align:center;background:#000;border:2px solid var(--accent)}
-header{border-bottom-width:2px;padding:25px 0}
-footer{border-top-width:2px;padding:15px 0;font-size:.9em;color:#888}
-h1{font-size:2.6em;color:var(--accent);text-shadow:0 0 8px rgba(0,255,156,.8)}
-nav{margin-top:18px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
-nav a{color:var(--accent);font-weight:500;text-decoration:none}
-nav a:hover{color:#fff}
-main{max-width:860px;padding:35px 20px}
-section{background:#1e1e1e;margin-bottom:35px;padding:22px;border-left:4px solid var(--accent);border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,.4)}
-h2{color:var(--accent);margin-bottom:15px}
-ul{list-style:square;margin-left:24px}
-a{color:var(--accent2)} a:hover{color:#fff}
-.copy-btn{background:var(--accent);color:#121212;border:0;padding:6px 12px;border-radius:5px;cursor:pointer;font-weight:bold}
-.copy-btn:hover{background:#fff}
-</style>
+    /* Kontener główny */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+      width: 90%;
+      max-width: 1200px;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .section {
+      background: rgba(20, 20, 20, 0.85);
+      border: 2px solid #0f0;
+      padding: 20px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 255, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    /* Animacja przy najechaniu */
+    .section:hover {
+      transform: scale(1.05);
+    }
+
+    .section a {
+      color: #0f0;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .section a:hover {
+      color: #f39c12;
+    }
+
+    /* Nagłówki */
+    h1 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    }
+
+    /* Styl stopki */
+    .footer {
+      margin-top: 40px;
+      font-size: 1.1em;
+      text-align: center;
+      color: #0f0;
+      border-top: 2px solid #0f0;
+      padding-top: 20px;
+    }
+
+    .footer ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 1.2em;
+    }
+
+    .footer li {
+      margin: 10px 0;
+    }
+
+    .info-text {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    .countdown {
+      font-weight: bold;
+      color: #f39c12;
+      font-size: 2em;
+      text-shadow: 0 0 10px #ff0000;
+    }
+
+    /* Responsywność */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+    }
+  </style>
 </head>
-
 <body>
-<header>
-  <h1>Kinga Szczepanek – dane personalne lekarza - narkomanki</h1>
-  <nav>
-    <a href="#o">O&nbsp;projekcie</a>
-    <a href="#fun">Funkcje</a>
-    <a href="#access">Dostęp</a>
-  </nav>
-</header>
 
-<main>
-  <section id="o">
-    <h2>O projekcie</h2>
-    <p><strong>Kinga Szczepanek – dane personalne lekarza - narkomanki</strong> to anonimowa, statyczna witryna publikująca treści w&nbsp;sieci Tor i&nbsp;Clearnet bez cenzury. Projekt nie gromadzi logów, ciasteczek ani identyfikatorów użytkowników.</p>
-  </section>
+  <div class="container">
+    <div class="section">
+      <h1>Informacje</h1>
+      <p class="info-text">Wszystkie najważniejsze informacje o stronie i jej funkcjach.</p>
+    </div>
+    <div class="section">
+      <h1>Narkotyki</h1>
+      <p class="info-text">Przydatne informacje o narkotykach i ich dostępności.</p>
+    </div>
+    <div class="section">
+      <h1>Sprawy Prywatne</h1>
+      <p class="info-text">Wszystkie prywatne treści i dane, dostępne tylko dla uprawnionych użytkowników.</p>
+    </div>
+    <div class="section">
+      <h1>Kody</h1>
+      <p class="info-text">Skrypty, kody dostępu i inne techniczne dane.</p>
+    </div>
+    <div class="section">
+      <h1>Numery</h1>
+      <p class="info-text">Zestawienia numerów do kontaktów i innych ważnych spraw.</p>
+    </div>
+    <div class="section">
+      <h1>Adresy</h1>
+      <p class="info-text">Wszystkie adresowe dane, w tym adresy internetowe i fizyczne.</p>
+    </div>
+    <div class="section">
+      <h1>Stare Hasła</h1>
+      <p class="info-text">Historia i zmienione hasła, dostępne tylko dla autoryzowanych użytkowników.</p>
+    </div>
+    <div class="section">
+      <h1>Multimedia</h1>
+      <p>
+        <a href="filmy.html">Filmy</a><br>
+        <a href="zdjecia.html">Zdjęcia</a><br>
+        <a href="dokumenty.html">Dokumenty</a>
+      </p>
+    </div>
+  </div>
 
-  <section id="fun">
-    <h2>Funkcje</h2>
+  <!-- Licznik czasu ostatniej aktualizacji -->
+  <div class="footer">
     <ul>
-      <li>Bliźniacze odsłony: <em>.onion</em> + HTTPS (ta sama zawartość)</li>
-      <li>Całkowity brak trackerów i&nbsp;analytics</li>
-      <li>Minimalny, responsywny kod (HTML&nbsp;+ CSS&nbsp;+ JS &lt; 25 kB)</li>
-      <li>Otwarty kod – każdy może zweryfikować pliki offline</li>
+      <li>Ostatnia aktualizacja strony: <span id="last-update">Ładowanie...</span></li>
+      <li>Strona będzie aktualizowana co 12 godzin.</li>
     </ul>
-  </section>
+  </div>
 
-  <section id="access">
-    <h2>Dostęp</h2>
-    <p><strong>Clearnet:</strong> <span id="clear-url">TUTAJ_WSTAW_URL_HTTPS</span></p>
-    <p><strong>Tor (.onion):</strong> <span id="onion">http://llsd52xkmw2co6tw2xqalzzptryd26wsl67o2zeia3fo4lnhfo6bk5ad.onion</span>
-       <button class="copy-btn" onclick="copyOnion()">Kopiuj</button></p>
-    <small>Wejdź przez <em>Tor Browser</em>, by zachować anonimowość.</small>
-  </section>
-</main>
+  <script>
+    // Funkcja aktualizująca czas ostatniej aktualizacji
+    function updateLastUpdateTime() {
+      const lastUpdateElement = document.getElementById('last-update');
+      const now = new Date();
+      const formattedDate = now.toLocaleString(); // Format daty i godziny
 
-<footer>
-  © 2025&nbsp;Kinga Szczepanek – dane personalne lekarza - narkomanki&nbsp;&ndash;&nbsp;wolna dystrybucja treści
-</footer>
+      lastUpdateElement.textContent = formattedDate;
+    }
 
-<script>
-function copyOnion(){navigator.clipboard.writeText(
-  document.getElementById('onion').innerText
-).then(()=>alert('Skopiowano .onion'),()=>alert('Kopiowanie nieudane'))}
-</script>
+    // Uruchomienie aktualizacji przy załadowaniu strony
+    updateLastUpdateTime();
+
+    // Ustawienie funkcji, aby wykonywała się co 12 godzin
+    setInterval(updateLastUpdateTime, 12 * 60 * 60 * 1000); // 12 godzin w milisekundach
+  </script>
+
 </body>
 </html>

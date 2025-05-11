@@ -1,0 +1,124 @@
+/* ────────────────────────────────────────────────
+   darkweb666  ·  global stylesheet (mobile-first)
+   ──────────────────────────────────────────────── */
+
+/* 1. Zmienne kolorów i ustawienia bazowe */
+:root{
+    --bg: #121212;
+    --fg: #e0e0e0;
+    --accent:  #00ff9c;
+    --accent2: #bb86fc;
+    --radius: 8px;
+    --shadow: 0 0 10px rgba(0,0,0,.4);
+    --transition: .25s ease-in-out;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+  
+  *{box-sizing:border-box;margin:0;padding:0}
+  
+  /* 2. Layout & typografia (mobile first) */
+  body{
+    font-family:'Roboto',sans-serif;
+    background:var(--bg);
+    color:var(--fg);
+    line-height:1.6;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:20px 12px;               /* trochę odstępu od krawędzi */
+  }
+  
+  /* typografia responsywna z clamp() – płynnie skaluje się
+     pomiędzy podanymi wartościami min-pref-max */
+  h1{font-size:clamp(1.8rem,6vw,2.8rem);color:var(--accent);
+      text-shadow:0 0 8px rgba(0,255,156,.8);margin-bottom:10px}
+  h2{font-size:clamp(1.3rem,4.5vw,1.9rem);color:var(--accent);margin-bottom:15px}
+  
+  /* header & footer */
+  header,footer{
+    width:100%;
+    text-align:center;
+    background:#000;
+    border:2px solid var(--accent);
+  }
+  header{padding:20px 0;border-bottom-width:2px}
+  footer{padding:15px 0;font-size:.85em;color:#888;border-top-width:2px}
+  
+  /* nawigacja – domyślnie kolumna (mobile) */
+  nav{
+    margin-top:14px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  nav a{
+    color:var(--accent);
+    font-weight:500;
+    text-decoration:none;
+    transition:color var(--transition);
+  }
+  nav a:hover{color:#fff}
+  
+  main{max-width:860px;width:100%;padding:30px 0}
+  
+  /* sekcje */
+  section{
+    background:#1e1e1e;
+    margin-bottom:35px;
+    padding:22px;
+    border-left:4px solid var(--accent);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+  }
+  ul{list-style:square;margin-left:24px}
+  a{color:var(--accent2);transition:color var(--transition)}
+  a:hover{color:#fff}
+  
+  /* przycisk kopiowania */
+  .copy-btn{
+    background:var(--accent);
+    color:#121212;
+    border:0;
+    padding:6px 14px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:background var(--transition),color var(--transition);
+  }
+  .copy-btn:hover{
+    background:#fff;
+    color:#000;
+  }
+  
+  /* ────────────────────────────────────────────────
+     Breakpoint 1 – ≥ 600 px (małe tablety w poziomie)
+     ──────────────────────────────────────────────── */
+  @media (min-width:600px){
+    nav{
+      flex-direction:row;
+      justify-content:center;
+      gap:18px;
+    }
+  }
+  
+  /* ────────────────────────────────────────────────
+     Breakpoint 2 – ≥ 768 px (tablety / małe laptopy)
+     ──────────────────────────────────────────────── */
+  @media (min-width:768px){
+    body{padding:25px 20px;}
+    main{padding:35px 0}
+    section{padding:26px}
+  }
+  
+  /* ────────────────────────────────────────────────
+     Breakpoint 3 – ≥ 992 px (desktopy)
+     ──────────────────────────────────────────────── */
+  @media (min-width:992px){
+    body{padding:35px 30px;}
+    h1{font-size:2.6rem}
+    h2{font-size:1.9rem}
+    nav a{font-size:1.05rem}
+  }
+  body{opacity:0;transition:opacity .8s ease-out}  /* stan początkowy */
+body.page-visible{opacity:1}       
