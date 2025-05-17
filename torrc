@@ -1,0 +1,5 @@
+# Przykladowy plik torrc do hostowania uslugi ukrytej
+testingTorNetwork 0
+
+HiddenServiceDir /var/lib/tor/darkweb666_service
+HiddenServicePort 80 127.0.0.1:8080
