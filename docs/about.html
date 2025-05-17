@@ -18,6 +18,16 @@
 </head>
 
 <body>
+  <!-- tuż po <body> -->
+  <div id="loader" style="display:grid;place-items:center;height:100vh">
+    <svg width="60" height="60" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" stroke="#00ff9c" stroke-width="10"
+              fill="none" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate"
+          from="0 50 50" to="360 50 50" dur="1s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+  </div>
   <header>
     <h1>O projekcie darkweb666</h1>
     <nav>
@@ -57,23 +67,11 @@
     © 2025 Kinga Szczepanek - lekarz i narkomanka – anonimowa platforma publikacji treści
   </footer>
   <script src="assets/js/script.js"></script>
+  <script>
+    /* usuń loader gdy JS zadziała */
+    document.addEventListener('DOMContentLoaded', () =>
+      document.getElementById('loader')?.remove()
+    );
+  </script>
 </body>
-<!-- tuż po <body> -->
-    <div id="loader" style="display:grid;place-items:center;height:100vh">
-        <svg width="60" height="60" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="45" stroke="#00ff9c" stroke-width="10"
-                  fill="none" stroke-linecap="round">
-            <animateTransform attributeName="transform" type="rotate"
-              from="0 50 50" to="360 50 50" dur="1s" repeatCount="indefinite"/>
-          </circle>
-        </svg>
-      </div>
-      
-      <script>
-        /* usuń loader gdy JS zadziała */
-        document.addEventListener('DOMContentLoaded', () =>
-          document.getElementById('loader')?.remove()
-        );
-      </script>
-      
 </html>
