@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kingia Szczepanek - Onion Layout</title>
+  
+  <style>
+    /* Tło i fonty */
+    body {
+      background: radial-gradient(circle at center, #222, #000);
+      color: #0f0;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Kontener główny */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+      width: 90%;
+      max-width: 1200px;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    /* Sekcje - Ulepszony wygląd */
+    .section {
+      background: rgba(20, 20, 20, 0.85);
+      border: 2px solid #0f0;
+      padding: 20px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 255, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: scale(1.05);
+    }
+
+    /* Styl tekstu i linków */
+    .section a {
+      color: #0f0;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .section a:hover {
+      color: #f39c12;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    }
+
+    /* Stopka */
+    .footer {
+      margin-top: 40px;
+      font-size: 1.1em;
+      text-align: center;
+      color: #0f0;
+      border-top: 2px solid #0f0;
+      padding-top: 20px;
+    }
+
+    .footer ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 1.2em;
+    }
+
+    .footer li {
+      margin: 10px 0;
+    }
+
+    .info-text {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    .countdown {
+      font-weight: bold;
+      color: #f39c12;
+      font-size: 2em;
+      text-shadow: 0 0 10px #ff0000;
+    }
+
+    /* Responsywność */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sekcja Informacji -->
+    <div class="section">
+      <h1>Informacje</h1>
+      <p class="info-text">Wszystkie najważniejsze informacje o stronie i jej funkcjach.</p>
+    </div>
+    <!-- Sekcja Narkotyki -->
+    <div class="section">
+      <h1>Narkotyki</h1>
+      <p class="info-text">Przydatne informacje o narkotykach i ich dostępności.</p>
+    </div>
+    <!-- Sekcja Prywatne -->
+    <div class="section">
+      <h1>Sprawy Prywatne</h1>
+      <p class="info-text">Wszystkie prywatne treści i dane, dostępne tylko dla uprawnionych użytkowników.</p>
+    </div>
+    <!-- Sekcja Kody -->
+    <div class="section">
+      <h1>Kody</h1>
+      <p class="info-text">Skrypty, kody dostępu i inne techniczne dane.</p>
+    </div>
+    <!-- Sekcja Numery -->
+    <div class="section">
+      <h1>Numery</h1>
+      <p class="info-text">Zestawienia numerów do kontaktów i innych ważnych spraw.</p>
+    </div>
+    <!-- Sekcja Adresy -->
+    <div class="section">
+      <h1>Adresy</h1>
+      <p class="info-text">Wszystkie adresowe dane, w tym adresy internetowe i fizyczne.</p>
+    </div>
+    <!-- Sekcja Stare Hasła -->
+    <div class="section">
+      <h1>Stare Hasła</h1>
+      <p class="info-text">Historia i zmienione hasła, dostępne tylko dla autoryzowanych użytkowników.</p>
+    </div>
+    <!-- Sekcja Multimedia -->
+    <div class="section">
+      <h1>Multimedia</h1>
+      <p>
+        <a href="filmy.html">Filmy</a><br>
+        <a href="zdjecia.html">Zdjęcia</a><br>
+        <a href="dokumenty.html">Dokumenty</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Licznik czasu ostatniej aktualizacji -->
+  <div class="footer">
+    <ul>
+      <li>Ostatnia aktualizacja strony: <span id="last-update">Ładowanie...</span></li>
+      <li>Strona będzie aktualizowana co 12 godzin.</li>
+    </ul>
+  </div>
+
+  <script>
+    // Funkcja aktualizująca czas ostatniej aktualizacji
+    function updateLastUpdateTime() {
+      const lastUpdateElement = document.getElementById('last-update');
+      const now = new Date();
+      const formattedDate = now.toLocaleString(); // Format daty i godziny
+
+      lastUpdateElement.textContent = formattedDate;
+    }
+
+    // Uruchomienie aktualizacji przy załadowaniu strony
+    updateLastUpdateTime();
+
+    // Ustawienie funkcji, aby wykonywała się co 12 godzin
+    setInterval(updateLastUpdateTime, 12 * 60 * 60 * 1000); // 12 godzin w milisekundach
+  </script>
+
+</body>
+</html>

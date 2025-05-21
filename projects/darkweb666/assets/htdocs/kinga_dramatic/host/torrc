@@ -1,0 +1,5 @@
+HiddenServiceDir /live/persistence/TailsData_unlocked/torhs_darkweb666/
+HiddenServiceVersion 3
+HiddenServicePort 80 127.0.0.1:8080
+
+
