@@ -14,12 +14,12 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <!-- Globalny styl -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <!-- tuż po <body> -->
-  <div id="loader" style="display:grid;place-items:center;height:100vh">
+    <div id="loader" >
     <svg width="60" height="60" viewBox="0 0 100 100">
       <circle cx="50" cy="50" r="45" stroke="#00ff9c" stroke-width="10"
               fill="none" stroke-linecap="round">
@@ -66,12 +66,6 @@
   <footer>
     © 2025 Kinga Szczepanek - lekarz i narkomanka – anonimowa platforma publikacji treści
   </footer>
-  <script src="assets/js/script.js"></script>
-  <script>
-    /* usuń loader gdy JS zadziała */
-    document.addEventListener('DOMContentLoaded', () =>
-      document.getElementById('loader')?.remove()
-    );
-  </script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>

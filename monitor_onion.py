@@ -5,10 +5,10 @@ Użycie:
     python monitor_onion.py http://adres1.onion [http://adres2.onion ...]
 """
 import sys, time, requests
-PROXIES = {'http': 'socks5h://127.0.0.1:9150',
-           'https': 'socks5h://127.0.0.1:9150'}
-TIMEOUT   = 15        # sekund
-SLEEP_SEC = 300       # 5 min
+
+PROXIES = {"http": "socks5h://127.0.0.1:9150", "https": "socks5h://127.0.0.1:9150"}
+TIMEOUT = 15  # sekund
+SLEEP_SEC = 300  # 5 min
 
 if len(sys.argv) < 2:
     print("Podaj co najmniej jeden URL .onion")
