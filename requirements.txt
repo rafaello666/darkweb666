@@ -1,14 +1,11 @@
 # Runtime dependencies
 requests
 mutagen
-
+fastapi
+uvicorn
 # Development dependencies
 pytest
 pytest-cov
+pytest-asyncio
 black
 \ No newline at end of file
-fastapi
-uvicorn
-pytest
-pytest-asyncio
-pytest-cov
