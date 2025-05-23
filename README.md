@@ -73,3 +73,8 @@
 73  Ataki ofensywne domyślnie wyłączone.
 74
 75  Wspiera odpowiedzialne ujawnianie podatności (responsible disclosure).
+
+77  ## Licencja
+78
+79  Projekt udostępniany jest na licencji MIT. Szczegóły znajdują się w pliku
+80  `LICENSE` w katalogu głównym repozytorium.
