@@ -1,0 +1,8 @@
+# Runtime dependencies
+requests
+mutagen
+
+# Development dependencies
+pytest
+pytest-cov
+black
