@@ -6,3 +6,9 @@ mutagen
 pytest
 pytest-cov
 black
+\ No newline at end of file
+fastapi
+uvicorn
+pytest
+pytest-asyncio
+pytest-cov
